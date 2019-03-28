@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+  	<security-constraint>
+ 		<web-resource-collection>
+ 			<url-pattern>/*</url-pattern>
+ 			<http-method>PUT</http-method>
+ 			<http-method>DELETE</http-method>
+ 			<http-method>HEAD</http-method>
+ 			<http-method>OPTIONS</http-method>
+ 			<http-method>TRACE</http-method>
+ 		</web-resource-collection>
+ 		<auth-constraint></auth-constraint>
+ 	</security-constraint>
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+  </error-page>
+  <error-page>
+	<error-code>500</error-code>
+	<location>/500.html</location>
+  </error-page>
+  
+</web-app>
